@@ -1,2 +1,247 @@
-# Botium-Toys-Internal-Security-Audit
-Botium-Toys-Internal-Security-Audit
+# Botium-Toys-Security-Audit-Writeup
+
+# Table of contents
+
+1. [Introduction](#introduction)
+2. [Scenario](#scenario)
+3. [Internal Security Audit Workflow](#workflow)
+4. [Controls Assessment](#control-assessment)
+5. [Compliance Checklist](#compliance-checklist)
+6. [Stakeholder Memorandum](#stakeholder-memo)
+7. [Conclusion](#conclusion)
+
+-------
+
+# Introduction <a name="introduction">
+
+I conducted an internal security audit assessment for Botium Toys, a fictional toy company, as part of my cybersecurity portfolio. This project was completed during the <a href='https://www.coursera.org/learn/manage-security-risks?specialization=cybersecurity-certificate'> Play It Safe: Manage Security Risks </a> Course. <a href='https://www.coursera.org/google-certificates/cybersecurity-certificate'> Google Cybersecurity Professional Certificate</a>
+   
+The purpose of this audit is to assess Botium Toys' cybersecurity program, ensuring its practices align with industry standards and best practices. The audit will focus on identifying vulnerabilities, with an emphasis on those categorized as "high risk," and provide recommendations to address them. Furthermore, a comprehensive strategy will be proposed to strengthen the company’s overall security posture. The audit team will document all findings, create remediation plans, and clearly communicate results and next steps to key stakeholders.
+
+# Scenario  <a name="scenario">
+Botium Toys is a small U.S. business that develops and sells toys. The business has a single physical location, which serves as their main office, a storefront, and warehouse for their products. However, Botium Toy’s online presence has grown, attracting customers in the U.S. and abroad. As a result, their information technology (IT) department is under increasing pressure to support their online market worldwide. 
+
+The manager of the IT department has decided that an internal IT audit needs to be conducted. She's worried about maintaining compliance and business operations as the company grows without a clear plan. She believes an internal audit can help better secure the company’s infrastructure and help them identify and mitigate potential risks, threats, or vulnerabilities to critical assets. The manager is also interested in ensuring that they comply with regulations related to internally processing and accepting online payments and conducting business in the European Union (E.U.).   
+
+The IT manager starts by implementing the National Institute of Standards and Technology Cybersecurity Framework (NIST CSF), establishing an audit scope and goals, listing assets currently managed by the IT department, and completing a risk assessment. The goal of the audit is to provide an overview of the risks and/or fines that the company might experience due to the current state of their security posture.
+
+Your task is to review the IT manager’s scope, goals, and risk assessment report. Then, perform an internal audit by completing a controls and compliance checklist. 
+
+------------------------
+
+
+The objectives of Botium Toys' internal IT audit are as follows:
+
+- Align with the National Institute of Standards and Technology Cybersecurity Framework (NIST CSF).
+- Develop improved processes to ensure system compliance.
+- Strengthen system controls.
+- Enforce the principle of least privilege in user credential management.
+- Establish comprehensive policies and procedures, including playbooks.
+- Ensure adherence to all relevant compliance requirements.
+
+   
+## Internal Security Audit Workflow  <a name="workflow">
+The internal security audit can be broken down into two parts each with their own steps to follow.
+
+### Part 1
+1. Analyze the audit scope, audit goals, and risk assessment
+2. Conduct the Audit
+   - Complete Controls assessment 
+     - Select controls needing to be implemented.
+     - Rate each selected control on prioirty (i.e. needing to be implemented immediately or in the future).
+   - Complete Compliance checklist
+     - Explain why selected compliance regulations and standards need to be adhered to.
+### Part 2
+1. Review results and deliverables completed in Part 1, Step #2
+   - make note of findings
+   - consider how to summarize your recommendations clearly and concisely to stakeholders. 
+2. Send findings and recommendations to stakeholders in a concise format
+
+
+Controls Assessment  <a name="control-assessment">
+===================
+
+
+Current Assets 
+--------------
+
+Assets managed by the IT Department include:
+
+- On-premises equipment for in-office business needs 
+
+- Employee equipment: end-user devices (desktops/laptops, smartphones), remote workstations, headsets, cables, keyboards, mice, docking stations, surveillance cameras, etc.
+
+- Management of systems, software, and services: accounting, telecommunication, database, security, ecommerce, and inventory management
+
+- Internet access
+
+- Internal network
+
+- Vendor access management
+
+- Data center hosting services 
+
+- Data retention and storage
+
+- Badge readers
+
+- Legacy system maintenance: end-of-life systems that require human monitoring
+
+### Administrative Controls 
+| Control Name | Control type and explanation | Needs to be implemented (X) | Priority |
+| --- | --- | --- | --- |
+| Least Privilege | Preventative; reduces risk by making sure vendors and non-authorized staff only have access to the assets/data they need to do their jobs | X | High |
+| Disaster recovery plans | Corrective; business continuity to ensure systems are able to run in the event of an incident/there is limited to no loss of productivity downtime/impact to system components, including: computer room environment (air conditioning, power supply, etc.); hardware (servers, employee equipment); connectivity (internal network, wireless); applications (email, electronic data); data and restoration | X | High |
+| Password policies | Preventative; establish password strength rules to improve security/reduce likelihood of account compromise through brute force or dictionary attack techniques | X | High |
+| Access control policies | Preventative; increase confidentiality and integrity of data | X | High |
+| Account management policies | Preventative; reduce attack surface and limit overall impact from disgruntled/former employees | X | High |
+| Separation of duties | Preventative; ensure no one has so much access that they can abuse the system for personal gain | X | High |
+
+### Technical Controls 
+| Control Name | Control type and explanation | Needs to be implemented (X) | Priority |
+| --- | --- | --- | --- |
+| Firewall | Preventative; firewalls ***are already in place*** to filter unwanted/malicious traffic from entering internal network | NA | NA |
+| Intrusion Detection System (IDS) | Detective; allows IT team to identify possible intrusions (e.g., anomalous traffic) quickly | X | High |
+| Encryption | Deterrent; makes confidential information/data more secure (e.g., website payment transactions) | X | High |
+| Backups | Corrective; supports ongoing productivity in the case of an event; aligns to the disaster recovery plan | X | High |
+| Password management system | Corrective; password recovery, reset, lock out notifications | X | High |
+| Antivirus (AV) software | Corrective; detect and quarantine known threats | X | High |
+| Manual monitoring, maintenance, and intervention | Preventative/corrective; required for legacy systems to identify and mitigate potential threats, risks, and vulnerabilities | X | High |
+
+
+### Physical Controls
+| Control Name | Control type and explanation | Needs to be implemented (X) | Priority |
+| --- | --- | --- | --- |
+| Time-controlled safe | Deterrent; reduce attack surface/impact of physical threats | X | Medium/Low |
+| Adequate lighting | Deterrent; limit “hiding” places to deter threats | X | Medium/Low |
+| Closed-circuit television (CCTV) surveillance | Preventative/detective; can reduce risk of certain events; can be used after event for investigation | X | High/Medium |
+| Locking cabinets (for network gear) | Preventative; increase integrity by preventing unauthorized personnel/individuals from physically accessing/modifying network infrastructure gear | X | High/Medium |
+| Signage indicating alarm service provider | Deterrent; makes the likelihood of a successful attack seem low | X | Low |
+| Locks | Preventative; physical and digital assets are more secure | X | High |
+| Fire detection and prevention (fire alarm, sprinkler system, etc.) | Detective/Preventative; detect fire in the toy store’s physical location to prevent damage to inventory, servers, etc. | X | Medium |
+
+Compliance checklist
+====================
+
+To review compliance regulations and standards, read the [controls, frameworks, and compliance](https://www.coursera.org/learn/foundations-of-cybersecurity/supplement/xu4pr/controls-frameworks-and-compliance) document.
+   
+I found that Botium Toys will need to adhere to the following standards:
+     
+-   General Data Protection Regulation (GDPR)
+      - GDPR is a European Union (E.U.) general data regulation that protects the processing of E.U. citizens' data and their right to privacy in and out of E.U. territory. Additionally, if a breach occurs and a E.U. citizen's data is compromised, they must be informed within 72 hours of the incident.
+         - Botium Toys is expanding to offer services and handle the data of customers abroad, GDPR compliance is in scope for the handling of financial and personal information for customers in the European Union.
+   
+
+-   Payment Card Industry Data Security Standard (PCI DSS)
+
+    - PCI DSS is an international security standard meant to ensure that organizations storing, accepting, processing, and transmitting credit card information do so in a secure environment. 
+
+       - Botium Toys must adhere to PCI DSS as it accepts payments online and person and They also store and processes customer credit card on an international scale. It's requirements and compliance need to be taken seriously based on possible consequences. The consequences of not complying with this standard is more severe in impact: Monetary fines monthly (ranging from 5,000-100,000 USD), costs of forensic audits upon a data breach, payment brand restrictions, damage to brand reputation, and possibility of lawsuit costs in the event of data breaches. 
+
+
+-   System and Organizations Controls (SOC type 1, SOC type 2)
+   - The SOC1 and SOC2 are a series of reports that focus on an organization's user access policies at different organizational levels. They are used to assess an organization's financial compliance and levels of risk. They also cover confidentiality, privacy, integrity, availability, security, and overall data safety. Control failures in these areas can lead to fraud.
+
+      - Botium Toys needs to establish and maintain appropriate user access for internal and external (third-party vendor) personnel to mitigate risk and ensure data safey.
+      - Both of these standards evaluate the effectiveness of a company's internal controls. While SOC1 I focused on financial reporting controls, SOC2 is concerned with information security controls, including customer data safety. 
+----------------
+   
+
+# Stakeholder memorandum <a name="stakeholder-memo">
+
+TO: IT Manager, Stakeholders
+
+FROM: Jonathan Halls\
+DATE: 10.03.2024\
+SUBJECT: Internal IT Audit Findings and Recommendations
+
+Dear Colleagues,
+
+Please review the following information regarding the Botium Toys internal audit scope, goals, critical findings, summary and recommendations.
+
+**Scope:**
+
+- The following systems are in scope: accounting, end point detection, firewalls, intrusion detection system, security information and event management (SIEM) tool. The systems will be evaluated for:
+
+  - Current user permissions
+
+  - Current implemented controls
+
+  - Current procedures and protocols
+
+- Ensuring current user permissions, controls, procedures, and protocols in place align with GDPR, PCI DSS, compliance requirements
+
+- Ensure current technology and assets are accounted for both hardware and system access.
+
+**Goals:**
+
+- Adhere to the NIST CSF.
+
+- Establish a better process for their systems to ensure they are compliant
+
+- Fortify system controls
+
+- Implement the concept of least permissions when it comes to user credential management
+
+- Establish their policies and procedures, which includes their playbooks
+
+**Critical findings** (must be addressed immediately):
+
+ Multiple controls need to be developed and implemented to meet the audit goals, including:
+
+- Principle of Least Privilege and Separation of duties
+
+- Disaster recovery plans
+
+- Password, Access control, and Account management policies
+
+- Intrusion Detection System (IDS)
+
+- Encryption (secure website transactions wand disk drive(s) containing sensitive information)
+
+- Backups
+
+- Implementation of a Password management system
+
+- Antivirus (AV) software
+
+- Manual monitoring, maintenance, and intervention for legacy systems
+
+- Closed-circuit television (CCTV) surveillance
+
+- Locks
+
+- Locking cabinets (for network gear)
+
+- Fire detection and prevention (fire alarm, sprinkler system, etc.)
+
+- Policies need to be developed and implemented for the following:
+
+  - To meet PCI DSS and GDPR compliance requirements.
+
+  - To meet SOC1 and SOC2 guidance related to user access policies and overall data safety.
+
+**Findings** (should be addressed, but no immediate need):
+
+The following physical controls should be considered in the future once the critical findings have been resolved:
+
+- Time-controlled safe
+
+- Adequate lighting
+
+- Signage indicating alarm service provider for restricted areas
+
+**Summary/Recommendations:**
+
+It is recommended that critical findings related to PCI and GDPR compliance be addressed immediately, as Botium Toys accepts online payments and is expanding its services to handle customer data internationally, including within the European Union. SOC1 and SOC2 guidelines regarding user access policies should be leveraged to align with the audit goal of implementing the principle of least privilege, ensuring that necessary policies and procedures are developed to achieve compliance.
+
+Disaster recovery plans and regular backups are also advised as essential components of a data and system resilience strategy. These measures will support business continuity in the event of incidents such as physical disasters (e.g., fires) or worst-case scenarios like cyberattacks or technical failures that could disrupt business operations. Consideration should also be given to fire detection and prevention systems to protect against physical damage.
+
+Integrating an Intrusion Detection System (IDS) and antivirus (AV) software into the current infrastructure will enhance the ability to detect intrusions and mitigate potential risks, particularly with the existing legacy systems that require manual monitoring and intervention.
+
+To safeguard physical assets at Botium Toys' location, locks and CCTV should be utilized to secure the premises and monitor for potential threats. Additionally, implementing a time-controlled safe, ensuring adequate lighting, and posting signage that indicates the alarm service provider will further strengthen the company's overall security posture.
+   
+# Conclusion  <a name="conclusion">
+  This concludes my mock security audit report. I hope you found it as useful and insightful as I did. If you have any constructive feedback or suggestions for improvement, please feel free to let me know.
+
+**Self-Evaluation**: I successfully identified the key controls that should be prioritized for immediate implementation to minimize risk and clearly understood the importance of Botium Toys adhering to the regulations and standards I chose in my initial assessment. This assignment was both challenging and rewarding, giving me the opportunity to put my knowledge and practical experience to the test.
